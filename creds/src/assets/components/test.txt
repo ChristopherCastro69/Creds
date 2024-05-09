@@ -1,0 +1,117 @@
+/* ecert template */
+
+position: relative;
+width: 792px;
+height: 612px;
+
+background: #FFFFFF;
+
+
+/* This certificate is awarded to */
+
+position: absolute;
+width: 324px;
+height: 24px;
+left: calc(50% - 324px/2);
+top: 169px;
+
+font-family: 'JetBrains Mono';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height */
+
+color: #1F1F1F;
+
+
+
+/* Wayne Matthew A. Dayata */
+
+position: absolute;
+width: 702px;
+height: 146px;
+left: calc(50% - 702px/2);
+top: 233px;
+
+font-family: 'JetBrains Mono';
+font-style: normal;
+font-weight: 800;
+font-size: 55px;
+line-height: 73px;
+text-align: center;
+
+color: #000000;
+
+
+
+/* For successfully participating in the Automated Testing Workshop event held last May 04, 2024 at enspace Cebu Business Park. Given this 6th day of May, 2024 at Cebu City, Philippines */
+
+position: absolute;
+width: 702px;
+height: 96px;
+left: calc(50% - 702px/2);
+top: 425px;
+
+font-family: 'JetBrains Mono';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+
+color: #1F1F1F;
+
+
+
+/* logos */
+
+position: absolute;
+width: 674px;
+height: 41.38px;
+left: calc(50% - 674px/2);
+top: 68.64px;
+
+
+
+/* enspace logo */
+
+position: absolute;
+width: 159.38px;
+height: 34.01px;
+left: 573.62px;
+top: 68.64px;
+
+background: url(image);
+
+
+/* lm logo */
+
+position: absolute;
+width: 156.04px;
+height: 29.34px;
+left: 393.01px;
+top: 76.32px;
+
+background: url(image.png);
+
+
+/* react cebu */
+
+position: absolute;
+width: 142.45px;
+height: 36.01px;
+left: 226.01px;
+top: 70.94px;
+
+background: url(image);
+
+
+/* js cebu */
+
+position: absolute;
+width: 142.45px;
+height: 36.01px;
+left: 59px;
+top: 74.01px;
+
+background: url(image);
