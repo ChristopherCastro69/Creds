@@ -67,7 +67,7 @@ const CertificateGenerator: React.FC = () => {
           </form>
         </div>
       </div>
-      <Modal isOpen={isOpenModal} handleClose={() => setIsOpenModal(true)}>
+      <Modal isOpen={isOpenModal} handleClose={() => setIsOpenModal(false)}>
         <Certificate {...formState} />
       </Modal>
     </>
