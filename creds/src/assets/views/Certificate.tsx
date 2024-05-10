@@ -22,63 +22,61 @@ const Certificate: FC<CertificateProps> = ({ name }) => {
 
   return (
     <>
-      <div className="certificate h-screen flex flex-col items-center justify-center">
+      <div
+        className="wrapper-container border-4 border-white p-14"
+        id="certificate-container"
+      >
         <div
-          className="wrapper-container p-14 border-4 border-white"
-          id="certificate-container"
+          className="wrapper border-4 border-black rounded-sm"
+          style={{ width: "880px", height: "580px" }}
         >
-          <div
-            className="wrapper border-4 border-black rounded-sm"
-            style={{ width: "880px", height: "580px" }}
-          >
-            <div className="certificateContainer p-10 mx-10 rounded-lg mt-10 mb-2 bg-white text-black text-center relative">
-              <div className="logo mb-12 flex justify-center">
-                <img
-                  className="mx-3 w-auto h-8"
-                  src={jsLogo}
-                  alt="JavaScript Cebu Logo"
-                />
-                <img
-                  className="mx-3 w-auto h-8"
-                  src={rtLogo}
-                  alt="React Cebu Logo"
-                />
+          <div className="certificateContainer mx-10 p-5 rounded-lg mt-11 mb-2 bg-white text-black text-center relative">
+            <div className="logo mb-12 flex justify-center">
+              <img
+                className="mx-5 w-auto h-8"
+                src={jsLogo}
+                alt="JavaScript Cebu Logo"
+              />
+              <img
+                className="mx-5 w-auto h-8"
+                src={rtLogo}
+                alt="React Cebu Logo"
+              />
 
-                <img className="mx-3 w-auto h-8" src={lmLogo} alt="LM Logo" />
-                <img
-                  className="mx-3 w-auto h-8"
-                  src={enspaceLogo}
-                  alt="Enspace Logo"
-                />
-              </div>
-              <span className="block font-mono text-lg mb-8">
-                This certificate is awarded to
-              </span>
-              <p className="primaryItalicText text-6xl font-bold mt-4 font-mono mb-4">
-                {name}
-              </p>
-              <span className="text-lg block font-mono mt-16 text-start">
-                For successfully participating in the{" "}
-                <strong>Automated Testing Workshop </strong>
-                event held last May 04, 2024 at{" "}
-                <strong>enspace Cebu Business Park</strong>.
-              </span>
-
-              <span className="text-lg block font-mono mt-5 text-start">
-                Given this 6th day of May, 2024 at Cebu City, Philippines
-              </span>
-              {/* Additional styles for logos */}
+              <img className="mx-5 w-auto h-8" src={lmLogo} alt="LM Logo" />
+              <img
+                className="mx-5 w-auto h-8"
+                src={enspaceLogo}
+                alt="Enspace Logo"
+              />
             </div>
+            <span className="block font-mono text-lg mb-10">
+              This certificate is awarded to
+            </span>
+            <p className="primaryItalicText text-6xl font-bold mt-4 font-mono mb-4">
+              {name}
+            </p>
+            <span className="text-lg block font-mono mt-20 text-start">
+              For successfully participating in the{" "}
+              <strong>Automated Testing Workshop </strong>
+              event held last May 04, 2024 at{" "}
+              <strong>enspace Cebu Business Park</strong>.
+            </span>
+
+            <span className="text-lg block font-mono mt-5 text-start">
+              Given this 6th day of May, 2024 at Cebu City, Philippines
+            </span>
+            {/* Additional styles for logos */}
           </div>
         </div>
-        <button
-          onClick={handleDownloadPDF} // Call handleDownloadPDF to start download
-          // Calling the downloadPDF function with containerId
-          className="border-2 border-black w-full bg-gray-200 py-4 px-6 text-base font-bold shadow transition-colors duration-300 hover:bg-black hover:text-white mt-12"
-        >
-          Download PDF
-        </button>
       </div>
+      <button
+        onClick={handleDownloadPDF} // Call handleDownloadPDF to start download
+        // Calling the downloadPDF function with containerId
+        className="border-2 border-black w-full bg-gray-200 py-4 px-6 text-base font-bold shadow transition-colors duration-300 hover:bg-black hover:text-white"
+      >
+        Download PDF
+      </button>
     </>
   );
 };
