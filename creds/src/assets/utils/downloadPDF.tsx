@@ -7,9 +7,22 @@ const downloadPDF = (
 ): void => {
   const certificateContainer = document.getElementById(containerId);
   if (certificateContainer) {
-    // set the downloading here to true
-    // console.log("Downloading" + setIsDownloading);
-    // setIsDownloading(true); // Set downloading to true when starting download
+    // Create a custom overlay or modal to display the "Downloading..." message
+    const downloadingOverlay = document.createElement("div");
+    downloadingOverlay.style.position = "fixed";
+    downloadingOverlay.style.top = "0";
+    downloadingOverlay.style.left = "0";
+    downloadingOverlay.style.width = "100%";
+    downloadingOverlay.style.height = "100%";
+    downloadingOverlay.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+    downloadingOverlay.style.display = "flex";
+    downloadingOverlay.style.alignItems = "center";
+    downloadingOverlay.style.justifyContent = "center";
+    downloadingOverlay.style.color = "#fff";
+    downloadingOverlay.style.fontFamily = "Arial, sans-serif";
+    downloadingOverlay.style.fontSize = "40px"; // Increased font size
+    downloadingOverlay.innerHTML = "<h1>Downloading...</h1>";
+    document.body.appendChild(downloadingOverlay);
 
     html2canvas(certificateContainer, { scale: 5 })
       .then((canvas) => {
@@ -37,12 +50,15 @@ const downloadPDF = (
           pdf.addImage(imgData, "PNG", offsetX, 0, imgWidth, imgHeight);
         }
         pdf.save("certificate.pdf");
-        alert("Download complete!"); // Show alert message when download completes
-        // then set the downloading to false here
+        alert("Download Complete");
+        // Remove the custom overlay or modal after download completes
+        document.body.removeChild(downloadingOverlay);
         setIsDownloadModal(false);
       })
       .catch(() => {
         alert("Error occurred while downloading PDF."); // Show alert message if there's an error
+        // Remove the custom overlay or modal if there's an error
+        document.body.removeChild(downloadingOverlay);
       });
   }
 };
