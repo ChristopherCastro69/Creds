@@ -48,7 +48,7 @@ const CertificateGenerator: React.FC = () => {
   return (
     <>
       <div className="wrapper bg-gray-900 h-screen flex flex-col text-white items-center justify-center overflow-auto">
-        <h1>Enter your name</h1>
+        <h1 className="text-2xl font-serif ">Enter your name</h1>
         <div className="container border border-white p-8 rounded-lg mt-8 mb-12 bg-gray-800 text-white w-96 text-center">
           <form onSubmit={handleSubmitForm}>
             <input
@@ -67,7 +67,7 @@ const CertificateGenerator: React.FC = () => {
           </form>
         </div>
       </div>
-      <Modal isOpen={isOpenModal} handleClose={() => setIsOpenModal(false)}>
+      <Modal isOpen={isOpenModal} handleClose={() => setIsOpenModal(true)}>
         <Certificate {...formState} />
       </Modal>
     </>
